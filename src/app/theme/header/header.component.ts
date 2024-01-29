@@ -12,9 +12,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import screenfull from 'screenfull';
 
 import { BrandingComponent } from '../widgets/branding.component';
-import { GithubButtonComponent } from '../widgets/github.component';
-import { NotificationComponent } from '../widgets/notification.component';
-import { TranslateComponent } from '../widgets/translate.component';
 
 @Component({
   selector: 'app-header',
@@ -27,9 +24,6 @@ import { TranslateComponent } from '../widgets/translate.component';
     MatButtonModule,
     MatIconModule,
     BrandingComponent,
-    GithubButtonComponent,
-    NotificationComponent,
-    TranslateComponent,
   ],
 })
 export class HeaderComponent {
@@ -39,7 +33,6 @@ export class HeaderComponent {
   @Input() showBranding = false;
 
   @Output() toggleSidenav = new EventEmitter<void>();
-  @Output() toggleSidenavNotice = new EventEmitter<void>();
 
   toggleFullscreen() {
     if (screenfull.isEnabled) {
