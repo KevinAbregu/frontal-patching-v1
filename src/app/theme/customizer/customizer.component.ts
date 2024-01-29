@@ -53,7 +53,6 @@ export class CustomizerComponent implements OnInit {
     theme: 'auto',
     showHeader: true,
     headerPos: 'fixed',
-    showUserPanel: true,
     navPos: 'side',
     dir: 'ltr',
     sidenavOpened: true,
