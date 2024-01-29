@@ -1,6 +1,8 @@
 {
   "menu": {
     "dashboard": "Dashboard",
+    "instancias": "Instancias",
+    "proyectos": "Proyectos",
     "design": "Design",
     "design.colors": "Color System",
     "design.icons": "Material Icons",

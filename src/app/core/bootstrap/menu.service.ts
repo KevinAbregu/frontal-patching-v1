@@ -1,6 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { share } from 'rxjs/operators';
+import { map, share } from 'rxjs/operators';
 
 export interface MenuTag {
   color: string; // background color
@@ -36,6 +37,12 @@ export interface Menu {
 })
 export class MenuService {
   private menu$: BehaviorSubject<Menu[]> = new BehaviorSubject<Menu[]>([]);
+
+  constructor(protected http: HttpClient){}
+
+  menu() {
+    return this.http.get<{ menu: Menu[] }>('assets/data/menu.json?_t=' + Date.now()).pipe(map(res => res.menu));
+  }
 
   /** Get all the menu data. */
   getAll(): Observable<Menu[]> {
@@ -148,3 +155,4 @@ export class MenuService {
     });
   }
 }
+
