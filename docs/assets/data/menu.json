@@ -1,0 +1,18 @@
+{
+  "menu": [
+    {
+      "route": "proyectos",
+      "name": "proyectos",
+      "type": "link",
+      "icon": "event"
+
+    },
+    {
+      "route": "instancias",
+      "name": "instancias",
+      "type": "link",
+      "icon": "table_chart"
+
+    }
+  ]
+}
