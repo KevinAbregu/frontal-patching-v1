@@ -13,7 +13,6 @@
   @if (options.showHeader && options.headerPos === 'above') {
     <app-header
       (toggleSidenav)="sidenav.toggle()"
-      (toggleSidenavNotice)="sidenavNotice.toggle()"
       [showBranding]="true">
     </app-header>
   }
@@ -31,17 +30,13 @@
       </app-sidebar>
     </mat-sidenav>
 
-    <mat-sidenav #sidenavNotice position="end" mode="over">
-      <app-sidebar-notice></app-sidebar-notice>
-    </mat-sidenav>
 
     <mat-sidenav-content #content class="matero-content-wrap">
       @if (options.showHeader && options.headerPos !== 'above') {
         <app-header
           [showToggle]="!options.sidenavCollapsed && options.navPos !== 'top'"
           [showBranding]="options.navPos === 'top'"
-          (toggleSidenav)="sidenav.toggle()"
-          (toggleSidenavNotice)="sidenavNotice.toggle()">
+          (toggleSidenav)="sidenav.toggle()">
         </app-header>
       }
 

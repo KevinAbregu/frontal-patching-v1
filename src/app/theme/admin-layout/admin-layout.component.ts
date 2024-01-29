@@ -11,7 +11,6 @@ import { filter } from 'rxjs/operators';
 import { AppSettings, SettingsService } from '@core';
 import { CustomizerComponent } from '../customizer/customizer.component';
 import { HeaderComponent } from '../header/header.component';
-import { SidebarNoticeComponent } from '../sidebar-notice/sidebar-notice.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { TopmenuComponent } from '../topmenu/topmenu.component';
 
@@ -34,7 +33,6 @@ const MONITOR_MEDIAQUERY = 'screen and (min-width: 960px)';
     HeaderComponent,
     TopmenuComponent,
     SidebarComponent,
-    SidebarNoticeComponent,
     CustomizerComponent,
   ],
 })
