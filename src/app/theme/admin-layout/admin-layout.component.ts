@@ -9,10 +9,8 @@ import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 import { AppSettings, SettingsService } from '@core';
-import { CustomizerComponent } from '../customizer/customizer.component';
 import { HeaderComponent } from '../header/header.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
-import { TopmenuComponent } from '../topmenu/topmenu.component';
 
 const MOBILE_MEDIAQUERY = 'screen and (max-width: 599px)';
 const TABLET_MEDIAQUERY = 'screen and (min-width: 600px) and (max-width: 959px)';
@@ -31,9 +29,7 @@ const MONITOR_MEDIAQUERY = 'screen and (min-width: 960px)';
     MatSidenavModule,
     NgProgressComponent,
     HeaderComponent,
-    TopmenuComponent,
     SidebarComponent,
-    CustomizerComponent,
   ],
 })
 export class AdminLayoutComponent implements OnDestroy {
