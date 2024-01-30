@@ -9,6 +9,7 @@ import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 import { AppSettings, SettingsService } from '@core';
+import { CustomizerComponent } from '../customizer/customizer.component';
 import { HeaderComponent } from '../header/header.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 
@@ -30,6 +31,7 @@ const MONITOR_MEDIAQUERY = 'screen and (min-width: 960px)';
     NgProgressComponent,
     HeaderComponent,
     SidebarComponent,
+    CustomizerComponent,
   ],
 })
 export class AdminLayoutComponent implements OnDestroy {
