@@ -1,0 +1,21 @@
+runtime: nodejs20
+handlers:
+
+- url: /assets/data/menu.json
+  static_files: dist/frontal-patching-v2/browser/assets/data/menu.json
+  upload: dist/frontal-patching-v2/browser/assets/data/menu.json
+
+- url: /assets/i18n/en-US.json
+  static_files: dist/frontal-patching-v2/browser/assets/i18n/en-US.json
+  upload: dist/frontal-patching-v2/browser/assets/i18n/en-US.json
+
+- url: /(.*\.(css|gif|png|jpg|js|html)$)
+  static_files: dist/frontal-patching-v2/browser/\1
+  upload: dist/frontal-patching-v2/browser/(.*\.(css|gif|png|jpg|js|html)$)
+  secure: always
+
+- url: /.*
+  static_files: dist/frontal-patching-v2/browser/index.html
+  upload: dist/frontal-patching-v2/browser/index.html
+  secure: always
+
