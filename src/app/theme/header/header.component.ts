@@ -12,6 +12,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import screenfull from 'screenfull';
 
 import { BrandingComponent } from '../widgets/branding.component';
+import { UserComponent } from '@theme/widgets/user.component';
 
 @Component({
   selector: 'app-header',
@@ -24,6 +25,7 @@ import { BrandingComponent } from '../widgets/branding.component';
     MatButtonModule,
     MatIconModule,
     BrandingComponent,
+    UserComponent
   ],
 })
 export class HeaderComponent {
